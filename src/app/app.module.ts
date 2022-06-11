@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './tournament/hello/hello.component';
 import { RegistrationComponent } from './tournament/registration/registration.component';
 import { BracketsComponent } from './tournament/brackets/brackets.component';
+import { ServicesComponent } from './services/services.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { BracketsComponent } from './tournament/brackets/brackets.component';
     HelloComponent,
     RegistrationComponent,
     BracketsComponent,
+    ServicesComponent,
   
   ],
   imports: [
