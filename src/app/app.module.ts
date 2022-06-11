@@ -7,12 +7,14 @@ import { HelloComponent } from './tournament/hello/hello.component';
 import { RegistrationComponent } from './tournament/registration/registration.component';
 import { BracketsComponent } from './tournament/brackets/brackets.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
     RegistrationComponent,
-    BracketsComponent
+    BracketsComponent,
+  
   ],
   imports: [
     BrowserModule,
