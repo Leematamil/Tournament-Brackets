@@ -10,7 +10,10 @@ describe('RosterService', () => {
     service = TestBed.inject(RosterService);
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+  it('should not allow duplicate contestant name', () => {
+    service.addContestant('Olivia');
+    expect(function (){
+    }).toThrowError('Constestant name already exist');
   });
+
 });

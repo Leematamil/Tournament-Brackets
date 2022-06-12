@@ -17,7 +17,7 @@ export class RosterService {
     if (newContestant === null || newContestant === ""){
       throw new Error('Constestant cannot be registered');
     } else if (this.constestants.includes(newContestant,0)){
-      throw new Error('Constestant already there!')
+      throw new Error('Constestant name already there!')
     }
     try {
       this.contestants.push(newContestant);
