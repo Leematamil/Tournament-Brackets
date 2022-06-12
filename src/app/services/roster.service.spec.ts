@@ -14,21 +14,28 @@ describe('RosterService', () => {
     service.addContestant('Olivia');
     expect(function (){
       service.addContestant('Olivia');
-    }).toThrowError('Constestant name already exist');
+    }).toThrowError('Constestant name already there!');
   });
   it('should not allow null value', () => {
     let name: null = null;
     expect(function (){
-      service.addContestant('name');
-    }).toThrowError('Constestant name cannot be rigestered');
+      service.addContestant(name);
+    }).toThrowError('Constestant cannot be registered');
   });
   it('should not allow empty string name', () => {
     expect(function (){
       service.addContestant('');
-    }).toThrowError('Constestant name cannot be rigestered');
+    }).toThrowError('Constestant cannot be registered');
   });
   it('should add one contestant', () => {
     service.addContestant('Selina');
     expect(service.getContestants().toString()).toEqual('Selina');
+  })
+  it('should add several contestant', () => {
+    service.addContestant('Selina');
+    service.addContestant('Olivia');
+    service.addContestant('Tamil');
+    service.addContestant('Leema');
+    expect(service.getContestants().toString()).toEqual('Selina,Olivia,Tamil,Leema');
   })
 });
