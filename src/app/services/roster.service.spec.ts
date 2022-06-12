@@ -13,7 +13,14 @@ describe('RosterService', () => {
   it('should not allow duplicate contestant name', () => {
     service.addContestant('Olivia');
     expect(function (){
+      service.addContestant('Olivia');
     }).toThrowError('Constestant name already exist');
+  });
+  it('should not allow null value', () => {
+    let name: null = null;
+    expect(function (){
+      service.addContestant('name');
+    }).toThrowError('Constestant name cannot be rigestered');
   });
 
 });
