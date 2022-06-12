@@ -22,5 +22,9 @@ describe('RosterService', () => {
       service.addContestant('name');
     }).toThrowError('Constestant name cannot be rigestered');
   });
-
+  it('should not allow empty string name', () => {
+    expect(function (){
+      service.addContestant('');
+    }).toThrowError('Constestant name cannot be rigestered');
+  });
 });
