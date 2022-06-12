@@ -14,9 +14,7 @@ import { ServicesComponent } from './services/services.component';
     AppComponent,
     HelloComponent,
     RegistrationComponent,
-    BracketsComponent,
-    ServicesComponent,
-  
+    BracketsComponent
   ],
   imports: [
     BrowserModule,
