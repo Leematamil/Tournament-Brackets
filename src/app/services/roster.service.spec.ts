@@ -27,4 +27,8 @@ describe('RosterService', () => {
       service.addContestant('');
     }).toThrowError('Constestant name cannot be rigestered');
   });
+  it('should add one contestant', () => {
+    service.addContestant('Selina');
+    expect(service.getContestants().toString()).toEqual('Selina');
+  })
 });
